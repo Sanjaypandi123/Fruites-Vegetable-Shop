@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-1: 1.4rem;
+    --weight-1: 600;
+    --color-1: white;
+    --bgcolor-1: #211509;
+    --bgcolor-2: #f7f3f0;
+    --btn-bgcol: #ba935b;
+}
+
+nav {
+    background-color: var(--bgcolor-1);
+}
+
+.navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+nav .container-fluid .navbar-toggler {
+    color: #ba935b;
+}
+
+nav .container-fluid .navbar-toggler span {
+    color: #ba935b;
+}
+
+nav .container-fluid ul li {
+    font-size: var(--font-1);
+    font-weight: var(--weight-1);
+}
+
+nav .container-fluid ul li a {
+    color: var(--color-1);
+}
+
+nav .container-fluid .div a {
+    font-weight: var(--weight-1);
+    font-size: var(--font-1);
+    color: var(--color-1);
+}
+
