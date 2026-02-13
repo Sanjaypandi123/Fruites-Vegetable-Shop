@@ -319,13 +319,13 @@ nav .container-fluid .div a {
 }
 
 .page-3 .row2 .cont .box:hover .top {
-    border-radius: 50%;
+    border-radius: 30%;
     overflow: hidden;
 }
 
 .page-3 .row2 .cont .box:hover .top .img-2 {
     transform: scale(1.1);
-    border-radius: 50%;
+    border-radius: 30%;
     visibility: visible;
 
 }
@@ -412,14 +412,16 @@ nav .container-fluid .div a {
 .page-3 .row2 .cont .box .bottom .cart button::after {
     content: '';
     width: 0%;
+    height: 2px;  
+    background: black;
     position: absolute;
     left: 30%;
     bottom: 20%;
-    transition: .8s;
+    transition: width 0.4s ease;
 }
 
 .page-3 .row2 .cont .box .bottom .cart button:hover::after {
-    border: 1px solid;
+    
     width: 38%;
 }
 
@@ -626,13 +628,13 @@ nav .container-fluid .div a {
 }
 
 .page-6 .row2 .cont .box:hover .top {
-    border-radius: 50%;
+    border-radius: 30%;
     overflow: hidden;
 }
 
 .page-6 .row2 .cont .box:hover .top .img-2 {
     transform: scale(1.1);
-    border-radius: 50%;
+    border-radius: 30%;
     visibility: visible;
 
 }
@@ -718,15 +720,16 @@ nav .container-fluid .div a {
 
 .page-6 .row2 .cont .box .bottom .cart button::after {
     content: '';
-    width: 0%;
     position: absolute;
-    left: 30%;
+    width: 0%;
+    height: 2px;            
+    left: 31%;
     bottom: 20%;
-    transition: .8s;
+    background: black;     
+    transition: width 0.4s ease;
 }
 
 .page-6 .row2 .cont .box .bottom .cart button:hover::after {
-    border: 1px solid;
     width: 38%;
 }
 
@@ -826,5 +829,201 @@ nav .container-fluid .div a {
 }
 
 
+
+
+
+
+
+/* footer */
+
+footer {
+    /* height: 100vh; */
+    background: url(../image/banner-2.png) no-repeat center;
+    background-size: cover;
+}
+
+footer .container1 {
+    background-color:#211509e2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    /* border: 1px solid red; */
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+}
+footer .container1 img{
+    position: absolute;
+}
+footer .container1 .img1{
+    width: 200px;
+    left: -3.5%;  
+    top: -12%;
+    transform: rotate(-120deg);
+}
+footer .container1 .img2{
+    width: 200px;
+    right: 0%;
+    top: -20%;
+}
+
+footer .container1 .box {
+    /* border: 1px solid red; */
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+footer .container1 .box h1 {
+    line-height: 30px;
+    font-size: 1.7rem;
+    color: #f9c06f;
+}
+
+footer .container1 .box span {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--bgcolor-2);
+}
+
+footer .container1 .box input {
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid var(--btn-bgcol);
+    border-radius: 20px;
+    padding-left: 20px;
+    color: var(--btn-bgcol);
+}
+
+footer .container1 .box input::placeholder {
+    font-weight: 600;
+    color: var(--btn-bgcol);
+}
+
+footer .container1 .box button {
+    width: 40%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: 1px solid var(--btn-bgcol);
+    color: var(--btn-bgcol);
+}
+
+footer .container1 .box button:hover {
+    background-color: var(--btn-bgcol);
+    color: black;
+}
+
+footer .container1 .box2{
+    align-items: center;
+    gap: 20px;
+}
+footer .container1 .box2 a{
+    text-decoration: none;
+    font-size: var(--font-1);
+    color: var(--bgcolor-2);
+    position: relative;
+    
+}
+footer .container1 .box2 a::after{
+    content: '';
+    width: 0%;
+    height: 2px;  
+    background: #f9c06f;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    transition: width 0.4s ease;
+}
+
+footer .container1 .box2 a:hover::after {
+    width: 100%;
+}
+
+footer .container1 .box p{
+    color: var(--bgcolor-2);
+}
+
+footer .container1 .box p:hover {
+    color: var(--btn-bgcol);
+}
+
+footer .container1 .box .icons {
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 20px;
+}
+
+footer .container1 .box .icons a {
+    font-size: 2rem;
+    color: white;
+    transition: .8s;
+}
+
+footer .container1 .box .icons a:hover {
+    transform: translateY(-20px);
+    color: var(--btn-bgcol);
+}
+
+footer .container1 .foot h5 {
+    text-align: center;
+    color: #f9c06f;
+}
+
+
+@media all and (max-width:576px) {
+    footer .container1 .box {
+        text-align: center;
+        align-items: center;
+    }
+
+    footer .container1 .box button {
+        padding: 5px 0;
+    }
+
+    footer .foot {
+        padding: 20px 10px;
+        text-align: center;
+    }
+}
+
+@media all and (max-width:768px) {
+    footer .container1 {
+        align-items: start;
+    }
+
+    footer .container1 .box {
+        /* border: 1px solid  red; */
+        height: 20em;
+        text-align: center;
+        align-items: center;
+    }
+
+    footer .container1 .box3 {
+        /* gap: 10px; */
+        margin-top: -10px;
+        height: 30em;
+    }
+
+    footer .container1 .box4 {
+        /* gap: 10px; */
+        margin-top: -10px;
+    }
+
+    footer .foot {
+        padding: 20px 10px;
+        text-align: center;
+    }
+}
 
 /* give me the same picture without "shop all -->"and high quality */
