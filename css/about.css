@@ -46,6 +46,23 @@ nav .container-fluid .div a {
     color: var(--color-1);
 }
 
+nav .nav-item a{
+    position: relative;
+}
+nav .nav-item a::after{
+    content: '';
+    width: 0%;
+    height: 2px;  
+    background: #f9c06f;
+    position: absolute;
+    left: 0%;
+    bottom: 10%;
+    transition: width 0.4s ease;
+}
+nav .nav-item a:hover::after{
+    width: 100%;
+}
+
 
 
 /* abt-1

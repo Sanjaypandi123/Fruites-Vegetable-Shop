@@ -46,6 +46,23 @@ nav .container-fluid .div a {
     color: var(--color-1);
 }
 
+nav .nav-item a{
+    position: relative;
+}
+nav .nav-item a::after{
+    content: '';
+    width: 0%;
+    height: 2px;  
+    background: #f9c06f;
+    position: absolute;
+    left: 0%;
+    bottom: 10%;
+    transition: width 0.4s ease;
+}
+nav .nav-item a:hover::after{
+    width: 100%;
+}
+
 /* abt-1
 ============== */
 
@@ -83,34 +100,45 @@ nav .container-fluid .div a {
     grid-template-columns: 400px auto;
 }
 .shop-2 aside{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
+
+
+
+
+
+
+
 .shop-2 main{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    padding: 50px 0;
     overflow: auto;
 }
-.page-6 {
-}
-.page-6 .row{
-    border: 1px solid red;
-    row-gap: 30px;
+
+/* page--6
+=============== */
+
+
+
+.page-6 .row2{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    row-gap: 50px;
 }
 
 .page-6 .row2 .cont .box {
     /* border: 1px solid green; */
-    width: 300px;
-    height: 400px;
-    display: grid;
-    scroll-snap-align: start;
-    grid-template-rows: 75% auto;
-    grid-template-areas: 'top'
-        'bottom';
+    width: 350px;
+    /* height: 450px; */
     overflow: hidden;
 }
 
 .page-6 .row2 .cont .box .top {
     /* border: 1px solid red; */
-    grid-area: top;
+    width: 100%;
+    height: 350px;
     position: relative;
     overflow: hidden;
     transition: .8s;
@@ -174,7 +202,7 @@ nav .container-fluid .div a {
 .page-6 .row2 .cont .box .top .icons button:hover {
     background-color: black;
     color: white;
-    transform: skew(-20deg);
+    transform: translateY(-20%);
 }
 
 .page-6 .row2 .cont .box .bottom {
@@ -184,7 +212,7 @@ nav .container-fluid .div a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: #f7f3f0; */
+    padding: 20px 0;
 }
 
 .page-6 .row2 .cont .box .bottom h4 {
@@ -194,20 +222,21 @@ nav .container-fluid .div a {
 
 .page-6 .row2 .cont .box .bottom .cart {
     /* border: 1px solid red; */
-    width: 50%;
-    height: 30%;
+    height: 24px;
+    width: 40%;
     position: relative;
     overflow: hidden;
 }
 
 .page-6 .row2 .cont .box .bottom .cart p {
+    /* border: 1px solid red; */
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 0;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     transition: .2s;
 }
 
@@ -227,19 +256,19 @@ nav .container-fluid .div a {
     content: '';
     position: absolute;
     width: 0%;
-    height: 2px;            
-    left: 31%;
-    bottom: 20%;
+    height: 3px;            
+    left: 21%;
+    bottom: 5%;
     background: black;     
     transition: width 0.4s ease;
 }
 
 .page-6 .row2 .cont .box .bottom .cart button:hover::after {
-    width: 38%;
+    width: 58%;
 }
 
 .page-6 .row2 .cont .box:hover .bottom .cart p {
-    top: -80%;
+    top: -100%;
 }
 
 .page-6 .row2 .cont .box:hover .bottom .cart button {

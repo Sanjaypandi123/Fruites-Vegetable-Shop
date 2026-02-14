@@ -46,6 +46,23 @@ nav .container-fluid .div a {
     color: var(--color-1);
 }
 
+nav .nav-item a{
+    position: relative;
+}
+nav .nav-item a::after{
+    content: '';
+    width: 0%;
+    height: 2px;  
+    background: #f9c06f;
+    position: absolute;
+    left: 0%;
+    bottom: 10%;
+    transition: width 0.4s ease;
+}
+nav .nav-item a:hover::after{
+    width: 100%;
+}
+
 
 /* contact--page */
 
@@ -92,7 +109,7 @@ nav .container-fluid .div a {
     font-size: 1.3rem;
     padding: 5px;
     border-radius: 10px;
-    background-color: #ff7226;
+    background-color: var(--btn-bgcol);
     color: white;
 }
 
@@ -104,7 +121,7 @@ nav .container-fluid .div a {
 }
 
 .details-page .main .left .div .cont a:hover {
-    color: #ff7226;
+    color: var(--btn-bgcol);
 }
 
 
@@ -150,7 +167,6 @@ nav .container-fluid .div a {
 .details-page .main .right .input2 input {
     width: 45%;
     border-radius: 10px;
-    padding: 10px;
     color: black;
     font-size: 1rem;
     font-weight: 600;
@@ -168,7 +184,7 @@ nav .container-fluid .div a {
 .details-page .main .right .message textarea {
     width: 100%;
     height: 100%;
-    padding: 10px 40px 0 40px;
+    padding: 10px;
     border-radius: 20px;
     color: black;
     font-size: 1rem;
@@ -193,7 +209,7 @@ nav .container-fluid .div a {
 .details-page .main .right .foot button {
     padding: 15px;
     border-radius: 20px;
-    background-color: #ff7226;
+    background-color: var(--bgcolor-1);
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -205,7 +221,7 @@ nav .container-fluid .div a {
 
 .details-page .main .right .foot button:hover {
     transform: scale(.9);
-    color: black;
+    background-color: var(--btn-bgcol);
 }
 
 .details-page .main .right .foot .icons {
@@ -218,27 +234,30 @@ nav .container-fluid .div a {
 
 .details-page .main .right .foot .icons a {
     font-size: 2rem;
-    color: #ff7226;
+    color: var(--bgcolor-1);
     transition: .5s;
 }
 
 .details-page .main .right .foot .icons a:hover {
     transform: translateY(-20px);
-    color: black;
+    color: var(--btn-bgcol);
 }
 
 @media all and (max-width:576px) {
-    /* .details-page .main .left {
-        margin-left: -75px;
+    /* .details-page{
+        padding: 30px 0;
     } */
-
+    .details-page .main{
+        padding: 200px 40px 40px 40px;
+        gap: 30px;
+    }
     .details-page .main .right {
-        width: 20em;
+        width: 25em;
         height: 20em;
-        margin-left: -75px;
+        /* margin-left: -75px; */
     }
 
-    .details-page .main .right .input1 input {
+    /* .details-page .main .right .input1 input {
         font-size: .6rem;
     }
 
@@ -248,29 +267,37 @@ nav .container-fluid .div a {
 
     .details-page .main .right .message textarea {
         font-size: .6rem;
-    }
+    }*/
 
     ::placeholder {
-        font-size: .6rem;
-    }
+        font-size: .7rem;
+    } 
+    .details-page .main .right .foot{
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+    }
     .details-page .main .right .foot button {
-        font-size: .5rem;
+        padding: 5px 6px;
+        font-size: .7rem;
     }
-
+    .details-page .main .right .foot .icons{
+        width: 60%;
+        display: none;
+    }
     .details-page .main .right .foot .icons a {
         font-size: 1rem;
     }
 }
 
 @media all and (max-width:768px) {
-    .details-page .main .left {
-        margin-left: -80px;
-    }
-
-    .details-page .main .right {
-        margin-left: -70px
-    }
+     .details-page .main{
+        gap: 30px;
+        padding: 100px 40px 40px 40px;
+     }
+     
+    
 }
 
 

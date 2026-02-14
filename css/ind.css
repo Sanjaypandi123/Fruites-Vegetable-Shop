@@ -45,6 +45,25 @@ nav .container-fluid .div a {
     font-size: var(--font-1);
     color: var(--color-1);
 }
+nav .container-fluid .div a:hover{
+    color: #f9c06f;
+}
+nav .nav-item a{
+    position: relative;
+}
+nav .nav-item a::after{
+    content: '';
+    width: 0%;
+    height: 2px;  
+    background: #f9c06f;
+    position: absolute;
+    left: 0%;
+    bottom: 10%;
+    transition: width 0.4s ease;
+}
+nav .nav-item a:hover::after{
+    width: 100%;
+}
 
 .banner {
     height: 100vh;
@@ -72,6 +91,16 @@ nav .container-fluid .div a {
     color: white;
 }
 
+@media all and (max-width:576px) {
+    .banner{
+        text-align: center;
+        padding: 80px 0 0 0 ;
+    }
+    .banner p{
+        color: #f7f3f0;
+        font-weight: 600;
+    }
+}
 
 /* page---2 */
 /* ============== */
@@ -440,14 +469,12 @@ nav .container-fluid .div a {
 
 /* page--4 */
 /* ============== */
-
+/* 
 .page4 {
-    /* border: 1px solid red; */
     background-color: var(--bgcolor-2);
 }
 
 .container-fluid .page-4 {
-    /* border: 1px solid red; */
     height: 350px;
     width: 700px;
     position: relative;
@@ -506,6 +533,102 @@ nav .container-fluid .div a {
 
 .container-fluid .page-4:hover .div {
     background-color: rgba(0, 0, 0, 0.504);
+}
+
+@media all and (max-width:576px) {
+    
+} */
+
+.page4 {
+    background-color: var(--bgcolor-2);
+}
+
+.container-fluid .page-4 {
+    height: 350px;
+    width: 700px;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 30px;
+}
+
+.container-fluid .page-4 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.container-fluid .page-4 .div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    transition: 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.container-fluid .page-4 .div h4 {
+    font-size: 2rem;
+    color: white;
+}
+
+.container-fluid .page-4 .div h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+.container-fluid .page-4 .div p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.container-fluid .page-4 .div .btn {
+    background-color: var(--btn-bgcol);
+    font-size: 1.1rem;
+    padding: 5px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.container-fluid .page-4 .div .btn:hover {
+    background-color: #967e65;
+    color: white;
+}
+
+.container-fluid .page-4:hover img {
+    transform: scale(1.2);
+}
+
+.container-fluid .page-4:hover .div {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+    .container-fluid .page-4 {
+        width: 100%;
+        height: 250px;
+    }
+    .container-fluid .page-4 .row {
+        gap: 40px;
+    }
+
+    .container-fluid .page-4 .div h1 {
+        font-size: 2rem;
+    }
+
+    .container-fluid .page-4 .div h4 {
+        font-size: 1.2rem;
+    }
+
+    .container-fluid .page-4 .div p {
+        font-size: 1rem;
+    }
 }
 
 
@@ -571,41 +694,24 @@ nav .container-fluid .div a {
 
 
 
-/* .page-3 .row2 .cont1 {
+.page-6 .row2{
+    /* border: 1px solid red; */
     display: flex;
-    animation: flow 30s ease-in-out infinite;
-} */
-
-/* .page-3 .row2 .cont {
-    padding: 0 10px;
-    } */
-
-/* .page-3 .row2:hover .cont1 {
-        animation-play-state: paused;
-        } */
-
-.page-6 {
-}
-.page-6 .row{
+    flex-wrap: wrap;
     row-gap: 50px;
-    
 }
 
 .page-6 .row2 .cont .box {
     /* border: 1px solid green; */
     width: 350px;
-    height: 450px;
-    display: grid;
-    scroll-snap-align: start;
-    grid-template-rows: 75% auto;
-    grid-template-areas: 'top'
-        'bottom';
+    /* height: 450px; */
     overflow: hidden;
 }
 
 .page-6 .row2 .cont .box .top {
     /* border: 1px solid red; */
-    grid-area: top;
+    width: 100%;
+    height: 350px;
     position: relative;
     overflow: hidden;
     transition: .8s;
@@ -669,7 +775,7 @@ nav .container-fluid .div a {
 .page-6 .row2 .cont .box .top .icons button:hover {
     background-color: black;
     color: white;
-    transform: skew(-20deg);
+    transform: translateY(-20%);
 }
 
 .page-6 .row2 .cont .box .bottom {
@@ -679,7 +785,7 @@ nav .container-fluid .div a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: #f7f3f0; */
+    padding: 20px 0;
 }
 
 .page-6 .row2 .cont .box .bottom h4 {
@@ -689,20 +795,21 @@ nav .container-fluid .div a {
 
 .page-6 .row2 .cont .box .bottom .cart {
     /* border: 1px solid red; */
-    width: 50%;
-    height: 30%;
+    height: 24px;
+    width: 40%;
     position: relative;
     overflow: hidden;
 }
 
 .page-6 .row2 .cont .box .bottom .cart p {
+    /* border: 1px solid red; */
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 0;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     transition: .2s;
 }
 
@@ -722,24 +829,25 @@ nav .container-fluid .div a {
     content: '';
     position: absolute;
     width: 0%;
-    height: 2px;            
-    left: 31%;
-    bottom: 20%;
+    height: 3px;            
+    left: 21%;
+    bottom: 5%;
     background: black;     
     transition: width 0.4s ease;
 }
 
 .page-6 .row2 .cont .box .bottom .cart button:hover::after {
-    width: 38%;
+    width: 58%;
 }
 
 .page-6 .row2 .cont .box:hover .bottom .cart p {
-    top: -80%;
+    top: -100%;
 }
 
 .page-6 .row2 .cont .box:hover .bottom .cart button {
     bottom: 0;
 }
+
 
 
 
