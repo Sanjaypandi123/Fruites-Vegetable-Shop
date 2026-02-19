@@ -299,19 +299,16 @@ nav .nav-item a:hover::after{
 
 .page-3 .row2 .cont1 {
     display: flex;
-    animation: flow 30s ease-in-out infinite;
-}
-
-.page-3 .row2 .cont {
-    padding: 0 10px;
-    /* border: 1px solid red; */
+    align-items: center;
+    gap: 20px;
+    animation: flow 20s ease-in-out infinite;
 }
 
 .page-3 .row2:hover .cont1 {
     animation-play-state: paused;
 }
 
-.page-3 .row2 .cont .box {
+.page-3 .row2 .box {
     /* border: 1px solid green; */
     width: 350px;
     height: 450px;
@@ -323,43 +320,44 @@ nav .nav-item a:hover::after{
     overflow: hidden;
 }
 
-.page-3 .row2 .cont .box .top {
+.page-3 .row2 .box .top {
     /* border: 1px solid red; */
     grid-area: top;
     position: relative;
     overflow: hidden;
-    transition: .8s;
+    transition: .5s;
 }
 
 
-.page-3 .row2 .cont .box .top img {
+.page-3 .row2 .box .top img {
     position: absolute;
     height: 100%;
     width: 100%;
 }
 
-.page-3 .row2 .cont .box .top .img-1 {
+.page-3 .row2 .box .top .img-1 {
     transition: .2s;
 }
 
-.page-3 .row2 .cont .box .top .img-2 {
-    transition: .4s;
-    visibility: hidden;
+.page-3 .row2 .box .top .img-2 {
+    transition: 1s;
+    /* visibility: hidden; */
+    opacity: 0;
 }
 
-.page-3 .row2 .cont .box:hover .top {
-    border-radius: 30%;
+.page-3 .row2 .box:hover .top {
+    border-radius: 50%;
     overflow: hidden;
 }
 
-.page-3 .row2 .cont .box:hover .top .img-2 {
+.page-3 .row2 .box:hover .top .img-2 {
     transform: scale(1.1);
-    border-radius: 30%;
-    visibility: visible;
-
+    border-radius: 50%;
+    /* visibility: visible; */
+    opacity: 1;
 }
 
-.page-3 .row2 .cont .box .top .icons {
+.page-3 .row2 .box .top .icons {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -371,11 +369,11 @@ nav .nav-item a:hover::after{
     transition: .9s;
 }
 
-.page-3 .row2 .cont .box .top:hover .icons {
+.page-3 .row2 .box .top:hover .icons {
     top: 0;
 }
 
-.page-3 .row2 .cont .box .top .icons button {
+.page-3 .row2 .box .top .icons button {
     font-size: 1.2rem;
     outline: none;
     border: none;
@@ -386,13 +384,13 @@ nav .nav-item a:hover::after{
     transition: .5s;
 }
 
-.page-3 .row2 .cont .box .top .icons button:hover {
+.page-3 .row2 .box .top .icons button:hover {
     background-color: black;
     color: white;
-    transform: skew(-20deg);
+    transform: translateY(-10px);
 }
 
-.page-3 .row2 .cont .box .bottom {
+.page-3 .row2 .box .bottom {
     /* border: 1px solid red; */
     grid-area: bottom;
     display: flex;
@@ -402,12 +400,12 @@ nav .nav-item a:hover::after{
     /* background-color: #f7f3f0; */
 }
 
-.page-3 .row2 .cont .box .bottom h4 {
+.page-3 .row2 .box .bottom h4 {
     font-size: 1rem;
     color: var(--btn-bgcol);
 }
 
-.page-3 .row2 .cont .box .bottom .cart {
+.page-3 .row2 .box .bottom .cart {
     /* border: 1px solid red; */
     width: 50%;
     height: 30%;
@@ -415,7 +413,7 @@ nav .nav-item a:hover::after{
     overflow: hidden;
 }
 
-.page-3 .row2 .cont .box .bottom .cart p {
+.page-3 .row2 .box .bottom .cart p {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -426,7 +424,7 @@ nav .nav-item a:hover::after{
     transition: .2s;
 }
 
-.page-3 .row2 .cont .box .bottom .cart button {
+.page-3 .row2 .box .bottom .cart button {
     width: 100%;
     height: 100%;
     outline: none;
@@ -438,7 +436,7 @@ nav .nav-item a:hover::after{
     cursor: pointer;
 }
 
-.page-3 .row2 .cont .box .bottom .cart button::after {
+.page-3 .row2 .box .bottom .cart button::after {
     content: '';
     width: 0%;
     height: 2px;  
@@ -449,16 +447,16 @@ nav .nav-item a:hover::after{
     transition: width 0.4s ease;
 }
 
-.page-3 .row2 .cont .box .bottom .cart button:hover::after {
+.page-3 .row2 .box .bottom .cart button:hover::after {
     
     width: 38%;
 }
 
-.page-3 .row2 .cont .box:hover .bottom .cart p {
+.page-3 .row2 .box:hover .bottom .cart p {
     top: -80%;
 }
 
-.page-3 .row2 .cont .box:hover .bottom .cart button {
+.page-3 .row2 .box:hover .bottom .cart button {
     bottom: 0;
 }
 
@@ -695,20 +693,22 @@ nav .nav-item a:hover::after{
 
 
 .page-6 .row2{
-    /* border: 1px solid red; */
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
     row-gap: 50px;
 }
 
-.page-6 .row2 .cont .box {
+.page-6 .row2 .box {
     /* border: 1px solid green; */
     width: 350px;
     /* height: 450px; */
     overflow: hidden;
 }
 
-.page-6 .row2 .cont .box .top {
+.page-6 .row2 .box .top {
     /* border: 1px solid red; */
     width: 100%;
     height: 350px;
@@ -718,34 +718,35 @@ nav .nav-item a:hover::after{
 }
 
 
-.page-6 .row2 .cont .box .top img {
+.page-6 .row2 .box .top img {
     position: absolute;
     height: 100%;
     width: 100%;
 }
 
-.page-6 .row2 .cont .box .top .img-1 {
+.page-6 .row2 .box .top .img-1 {
     transition: .2s;
 }
 
-.page-6 .row2 .cont .box .top .img-2 {
-    transition: .4s;
-    visibility: hidden;
+.page-6 .row2 .box .top .img-2 {
+    transition: 1s;
+    /* visibility: hidden; */
+    opacity: 0;
 }
 
-.page-6 .row2 .cont .box:hover .top {
-    border-radius: 30%;
+.page-6 .row2 .box:hover .top {
+    border-radius: 30px;
     overflow: hidden;
 }
 
-.page-6 .row2 .cont .box:hover .top .img-2 {
+.page-6 .row2 .box:hover .top .img-2 {
     transform: scale(1.1);
-    border-radius: 30%;
-    visibility: visible;
-
+    border-radius: 30px;
+    /* visibility: visible; */
+    opacity: 1;
 }
 
-.page-6 .row2 .cont .box .top .icons {
+.page-6 .row2 .box .top .icons {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -757,11 +758,11 @@ nav .nav-item a:hover::after{
     transition: .9s;
 }
 
-.page-6 .row2 .cont .box .top:hover .icons {
+.page-6 .row2 .box .top:hover .icons {
     top: 0;
 }
 
-.page-6 .row2 .cont .box .top .icons button {
+.page-6 .row2 .box .top .icons button {
     font-size: 1.2rem;
     outline: none;
     border: none;
@@ -772,13 +773,13 @@ nav .nav-item a:hover::after{
     transition: .5s;
 }
 
-.page-6 .row2 .cont .box .top .icons button:hover {
+.page-6 .row2 .box .top .icons button:hover {
     background-color: black;
     color: white;
     transform: translateY(-20%);
 }
 
-.page-6 .row2 .cont .box .bottom {
+.page-6 .row2 .box .bottom {
     /* border: 1px solid red; */
     grid-area: bottom;
     display: flex;
@@ -788,12 +789,12 @@ nav .nav-item a:hover::after{
     padding: 20px 0;
 }
 
-.page-6 .row2 .cont .box .bottom h4 {
+.page-6 .row2 .box .bottom h4 {
     font-size: 1rem;
     color: var(--btn-bgcol);
 }
 
-.page-6 .row2 .cont .box .bottom .cart {
+.page-6 .row2 .box .bottom .cart {
     /* border: 1px solid red; */
     height: 24px;
     width: 40%;
@@ -801,7 +802,7 @@ nav .nav-item a:hover::after{
     overflow: hidden;
 }
 
-.page-6 .row2 .cont .box .bottom .cart p {
+.page-6 .row2 .box .bottom .cart p {
     /* border: 1px solid red; */
     height: 100%;
     width: 100%;
@@ -813,7 +814,7 @@ nav .nav-item a:hover::after{
     transition: .2s;
 }
 
-.page-6 .row2 .cont .box .bottom .cart button {
+.page-6 .row2 .box .bottom .cart button {
     width: 100%;
     height: 100%;
     outline: none;
@@ -825,7 +826,7 @@ nav .nav-item a:hover::after{
     cursor: pointer;
 }
 
-.page-6 .row2 .cont .box .bottom .cart button::after {
+.page-6 .row2 .box .bottom .cart button::after {
     content: '';
     position: absolute;
     width: 0%;
@@ -836,15 +837,15 @@ nav .nav-item a:hover::after{
     transition: width 0.4s ease;
 }
 
-.page-6 .row2 .cont .box .bottom .cart button:hover::after {
+.page-6 .row2 .box .bottom .cart button:hover::after {
     width: 58%;
 }
 
-.page-6 .row2 .cont .box:hover .bottom .cart p {
+.page-6 .row2 .box:hover .bottom .cart p {
     top: -100%;
 }
 
-.page-6 .row2 .cont .box:hover .bottom .cart button {
+.page-6 .row2 .box:hover .bottom .cart button {
     bottom: 0;
 }
 
@@ -913,7 +914,7 @@ nav .nav-item a:hover::after{
 }
 
 .page-7 .cont1 .col1 .top .div a:hover {
-    transform: skew(-20deg);
+    transform: rotate(20deg);
 }
 
 .page-7 .cont1 .col1:hover .top .div {
