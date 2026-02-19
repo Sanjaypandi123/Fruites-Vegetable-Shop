@@ -101,7 +101,7 @@ function subqty(pdid) {
 let over = () => {
     let cartArray = JSON.parse(localStorage.getItem("cartArray")) || []
     if (cartArray.length > 0) {
-        let sure = confirm("Are sure buy the products!!!..")
+        let sure = confirm("Are you sure buy the products!!!..")
         if (sure) {
             localStorage.setItem("cartArray", JSON.stringify([]))
             Swal.fire({
